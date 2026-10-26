@@ -8,6 +8,16 @@ disable-model-invocation: true
 
 When the task drives a live browser flow, read `../playwright-golden/SKILL.md` and follow it.
 
+## First increment
+
+Make one Chrome project run one smoke test through a native fixture before you add another browser, Electron, OpenFin, or a second design. Do not spawn a child agent to compare architectures.
+
+A saved storage file is not a fresh login. A UUID from a protected endpoint is not an account binding. Prove a fresh login and bind the account to the subject before you trust cached state.
+
+Do not pass a password or token as a command argument. Do not write those values, cookie headers, or raw page snapshots into the reply or a log.
+
+After you choose a Playwright version, write that version into every brief you still follow.
+
 ## Layout
 
 One project in `playwright.config.ts` is one setup. Specs do not call `test.use`.

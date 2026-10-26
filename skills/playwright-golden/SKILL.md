@@ -22,6 +22,18 @@ Do not add expect to run-code, named-step resume, or an OpenFin launcher.
 
 The probe used the unauthenticated Workspace login page. It does not qualify authenticated-shell behavior, crashes, arbitrary timeouts, or trace export while keeping the host running.
 
+## Child windows
+
+Before the click that can open a window, capture the popup. Do not act on the parent page while that child is unresolved. Inspect that page. Classify blank or failed content before any other work. Close only a framework-owned child.
+
+## Account challenge
+
+Read the displayed account identifier before you submit the password. Stop when it differs from the intended account, including by letter case.
+
+## Inspection
+
+Wait until the window or frame you inspect is ready. Do not call `waitForFunction` with a function that returns true. Do not wait inside a frame that has detached.
+
 ## Command
 
 Start the owned connected session with `-- --trace=on`.
