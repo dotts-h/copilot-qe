@@ -12,6 +12,8 @@ Before any work, read `<qe>/skills/playwright-doctrine/SKILL.md`. When the task 
 
 Do not spawn `pstack:poteto-agent`, `general-purpose`, or any child to sketch architecture. One Chrome smoke test must pass before a second setup or a design child starts. `/poteto-mode` in the same session does not change that order.
 
+After the web smokes pass, the next unit is hermetic failure tests, then one restored-state experiment for a single provider and runtime. Desktop research is a separate pass. It does not block the web command.
+
 A stop from the operator ends parent-page work immediately. Close browsers this session opened. Treat a child as stopped only after that child confirms it stopped.
 
 Do not print passwords, tokens, cookie values, or raw snapshots that contain them.

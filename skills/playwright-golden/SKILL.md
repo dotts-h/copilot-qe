@@ -26,6 +26,8 @@ The probe used the unauthenticated Workspace login page. It does not qualify aut
 
 Before the click that can open a window, capture the popup. Do not act on the parent page while that child is unresolved. Inspect that page. Classify blank or failed content before any other work. Close only a framework-owned child.
 
+If the click navigates the same page, it is not a child window. Inspect that page. Do not wait for a popup the product does not open.
+
 ## Account challenge
 
 Read the displayed account identifier before you submit the password. Stop when it differs from the intended account, including by letter case.
