@@ -1,0 +1,18 @@
+{
+  "name": "qe",
+  "displayName": "qe",
+  "version": "0.1.8",
+  "description": "QE workflows. This slice creates and continues Playwright frameworks.",
+  "author": {
+    "name": "Horia C. Rădulescu"
+  },
+  "repository": "https://github.com/dotts-h/copilot-qe",
+  "license": "MIT",
+  "keywords": [
+    "qe",
+    "playwright",
+    "fixtures",
+    "page-objects"
+  ],
+  "skills": "./skills/"
+}

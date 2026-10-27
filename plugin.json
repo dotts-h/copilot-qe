@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "qe",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "QE workflows for Copilot. This slice creates and continues Playwright frameworks.",
   "author": {
     "name": "Horia C. Rădulescu"

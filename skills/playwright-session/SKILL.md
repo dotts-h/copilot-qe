@@ -13,7 +13,7 @@ After a compaction, read those files again before the next action. The summary i
 1. Read the working directory and the request.
 2. Name one unit that the evidence supports. Continue the framework when one exists. Create one when the directory has none.
 3. Do that unit. Adapt the host, the windows, and the assertions from the product in front of you.
-4. Prove the unit on the command a caller runs. A passing flow stays unless this unit changes it.
+4. Prove the unit on the command a caller runs. A passing flow stays unless this unit changes it. When `pwx` is on PATH, a live browser unit uses the commands in the golden skill.
 5. Write the result in the project. Include what finished, what failed, what is open, and the next observation.
 6. Take the next unit the evidence names, or stop when the request is done.
 
