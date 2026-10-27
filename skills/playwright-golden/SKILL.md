@@ -22,6 +22,8 @@ Do not add expect to run-code, named-step resume, or an OpenFin launcher.
 
 The probe used the unauthenticated Workspace login page. It does not qualify authenticated-shell behavior, crashes, arbitrary timeouts, or trace export while keeping the host running.
 
+A new login is a new run. Record why the owned session cannot answer the question before you start that login.
+
 ## Child windows
 
 Before the click that can open a window, capture the popup. Do not act on the parent page while that child is unresolved. Inspect that page. Classify blank or failed content before any other work. Close only a framework-owned child.
