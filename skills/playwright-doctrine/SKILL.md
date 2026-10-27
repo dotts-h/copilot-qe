@@ -44,6 +44,19 @@ Page objects live under `pages/`. A page imports only the directory one level un
 
 Custom matchers are `expect.extend` in the project's expect module. Do not import `expect` from `@playwright/test` in any other file.
 
+## Dig order
+
+Look in this order. Use the first source that identifies the control.
+
+1. List the frames. Act in the frame that owns the surface. Stop when that frame is detached.
+2. Read the accessibility snapshot of that frame. Use roles, names, and states.
+3. Use the locator order in Page methods, inside that frame. An open shadow root stays on that order.
+4. Read a label, a placeholder, or a test id when the snapshot omitted it and the locator order allows it.
+5. Read the network log and the console for a failure the tree does not show.
+6. Take a screenshot only when the paint and the tree disagree, or the surface is a canvas. A screenshot is the last resort. Do not write a locator from it. Do not keep a picture of a login screen.
+
+A closed shadow root, or a frame the browser will not expose, has no locator inside it. Use the outer control's accessible name, or ask the operator.
+
 ## Page methods
 
 A page object is stateless. Assign locator fields in the constructor only.
