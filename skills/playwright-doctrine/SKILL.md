@@ -70,6 +70,12 @@ Electron and OpenFin launch only inside host fixtures. Author a new flow on a ve
 
 Do not invent an application switch. `--remote-debugging-port` does not select a Workspace profile. Do not run an installed runtime binary with `--help` to discover switches. Do not edit a signed or licensed manifest to force a port. Do not attach to a port this run does not own. Do not kill a shared runtime to close one application.
 
+Read the installed app before you call a desktop flag unknown. For Electron, follow the bootstrap imports, the argument parser, and the packaged config. For OpenFin, read the manifest, then the installed runtime and the app files that consume those fields.
+
+A value in the manifest or the app is a candidate. Label it as documented, seen in the installed app, verified on a live launch, or rejected. Infer a value only from one of those sources. A manifest field is not a launch fact until the app reads it.
+
+If the required value is still missing, ask the operator and name the missing value. Do not close the desktop pass while an installed file that can hold the flag is unread, or while that question is unasked. Absence of a string in one binary does not prove the switch is unsupported.
+
 Do not list the golden project as a dependency of the other projects.
 
 A PWX session name is not an account lock. `browser close` and `pwx stop` do not prove the server released the account. `pwx stop` must not tear down a Workspace session the operator owns.
