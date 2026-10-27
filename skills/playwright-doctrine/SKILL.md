@@ -6,9 +6,23 @@ disable-model-invocation: true
 
 # Playwright doctrine
 
-When the task drives a live browser flow, read `../playwright-golden/SKILL.md` and follow it.
+When the task drives a live browser flow, read `../playwright-golden/SKILL.md` and follow it. The session flow is `../playwright-session/SKILL.md`.
 
 The rules below apply to any product and any host. Specialize a rule only from evidence in the product in front of you. Do not copy a previous product's flags, accounts, or window names into a new target.
+
+## The unit
+
+Read the working directory and the request before you create a file.
+
+When a framework is there, continue it. When the directory has no framework, create one.
+
+Name one unit from that evidence. A passing flow stays unless the unit requires a change. Do that unit. Prove it on the command a caller runs. Start the next unit after that proof exists.
+
+Do not spawn a child to sketch architecture before that proof exists.
+
+The default command runs the unit you named. A missing filter must not launch every target. An unqualified host stays a failure with its reason. Do not report it as a skip, a `test.fixme`, or a pass.
+
+Do not rewrite the framework to add folders. Move a module only after the test that protects that behavior exists. Keep an unexecuted experiment off the public fixture.
 
 ## Read the app
 
@@ -18,19 +32,17 @@ Use the accessible name the snapshot shows. Do not wait for a label you have not
 
 After a click, the next observation is the destination. A new route is a state of that frame. It is not a missing frame. Do not continue a predicate on the parent after a new page has opened.
 
-## First increment
+## Prove the unit
 
-Make one host run one smoke test through a native fixture before you add another host or a second design. Do not spawn a child agent to compare architectures.
+The proof is the behavior a caller can run.
 
-The next unit is the hermetic failure tests for the rules that smoke uses. Then repeat that same host. Record both runs against the source fingerprint. Add the next browser host only after that record exists. Add one host at a time.
+When the unit has these phases, report authentication, identity, application checks, and cleanup as separate outcomes. A passed hosting test does not pass a failed check. A typecheck does not pass it. A cleanup pass does not pass it.
 
-A desktop host is its own pass. Map the windows that host opens before you submit credentials.
+Write that result in the project before the next unit. After a compaction, write the open result again before the next action. The chat summary is not the result. Include what finished, what failed, what is still open, and the next observation.
 
-An unqualified host stays blocked until that host passes fresh authentication, the expected identity, a ready application surface, the shared component contracts, a repeat run, and ownership-scoped teardown.
+A setting that exists only in an authoring adapter is not part of the framework. Put it in the native config before a component uses it.
 
-The ordinary command names one verified target. The full matrix is a separate command. A missing target must not launch every target. A blocked host stays a failure with its reason. Do not report it as a skip, a `test.fixme`, or a pass.
-
-Do not rewrite the framework to add folders. Move a module only after the test that protects that behavior exists. Keep an unexecuted experiment off the public fixture.
+After you edit a class the held worker constructs, confirm the worker is running that edit. Restart the worker once when fixture setup must change. Do not discover the stale class through another business action.
 
 ## Authentication state
 
@@ -50,33 +62,15 @@ Do not pass a password or token as a command argument. Do not write those values
 
 After you choose a Playwright version, write that version into every brief you still follow.
 
-## Authoring loop
-
-Report authentication, identity, application checks, and cleanup as four separate outcomes. A passed hosting test does not pass a failed authoring check.
-
-A setting that exists only in an authoring adapter is not part of the framework. Put it in the native config before a component uses it.
-
-After you edit a class the held worker constructs, confirm the worker is running that edit. Restart the worker once when fixture setup must change. Do not discover the stale class through another business action.
-
 ## Stay in the session
 
 Keep the owned context. Inspect and edit in that context.
 
-Start a new login for a fresh-login smoke, including its recorded repeat. A restored-state check opens a new context and does not type the password.
+Start a new login when the unit is a fresh login, including a repeat of that login. A restored-state check opens a new context and does not type the password.
 
-Start another login only when the current context cannot answer the question. Write the reason in the run record before that login. A closed context, a crash, or the wrong account can be the reason.
+Start another login only when the current context cannot answer the question. Write the reason in the unit result before that login. A closed context, a crash, or the wrong account can be the reason.
 
 A selector miss is not a reason. A route change is not a reason. A failed assertion is not a reason. A stale worker is not a reason.
-
-## Run record
-
-Write one file under `runs/` after every unit. After a compaction, write the open record again before the next action. The chat summary is not this file.
-
-Name the source fingerprint, the target, the run kind, the runtime version, and the repeat index. Record authentication, identity, application checks, and cleanup as separate results. Name the exact failure. Name whether a new login happened and why. Name the owned windows that are still open, and name the next observation.
-
-Mark a finished experiment with its result before the next experiment starts. Mark an open experiment unresolved.
-
-A typecheck does not fill this file. A hosting-test pass does not fill it. A cleanup pass does not fill it.
 
 ## Windows
 
@@ -137,7 +131,9 @@ A comment does not change the run.
 
 Platform differences go through a port the fixture injects. A page does not branch on the host name.
 
-Use the host tool's launch path for a platform it already supports. Do not invent a second launcher. An unqualified host stays inside the host fixture. Author a new flow on a verified host until that host passes the checklist above.
+Use the host tool's launch path for a platform it already supports. Do not invent a second launcher. An unqualified host stays a failure inside the host fixture. Investigate that host when the unit in front of you is that host. Investigation does not qualify it.
+
+A host is qualified when it has shown fresh authentication, the expected identity, a ready surface, the shared behavior the unit named, a repeat run, and ownership-scoped teardown.
 
 When the generic launch does not supply a product-specific value, read that product. Start from the config it ships, then the installed files that consume the config. Follow imports, argument parsing, and packaged config until the value is found or the readable files are exhausted.
 
