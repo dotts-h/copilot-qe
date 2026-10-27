@@ -14,6 +14,8 @@ Do not spawn `pstack:poteto-agent`, `general-purpose`, or any child to sketch ar
 
 After the verified hosts pass, the next unit is hermetic failure tests, then one restored-state experiment for a single provider and host. An unqualified host is a separate pass. It does not block the verified command. On that pass, use the host tool's launch path. Read the installed product for a value that path does not supply. A config file is not enough. Ask for a value the product does not show.
 
+Map the running product before the first business assertion. Do not ask the operator to explain a screen you have not opened. When the operator asks why work has stalled, answer with the evidence and the next observation. Do not agree with a conclusion the evidence does not show.
+
 A stop from the operator ends parent-page work immediately. Close browsers this session opened. Treat a child as stopped only after that child confirms it stopped.
 
 Do not print passwords, tokens, cookie values, or raw snapshots that contain them.

@@ -10,6 +10,14 @@ When the task drives a live browser flow, read `../playwright-golden/SKILL.md` a
 
 The rules below apply to any product and any host. Specialize a rule only from evidence in the product in front of you. Do not copy a previous product's flags, accounts, or window names into a new target.
 
+## Read the app
+
+Before the first business assertion, map the running product in one pass. Name the outer host, the frame that owns the shell, the persistent chrome, and the area where a feature loads. Open one control in the area you were asked about and record where it lands. Same page, new route, dialog, or new page.
+
+Use the accessible name the snapshot shows. Do not wait for a label you have not seen. Do not ask the operator to explain a control you have not opened.
+
+After a click, the next observation is the destination. A new route is a state of that frame. It is not a missing frame. Do not continue a predicate on the parent after a new page has opened.
+
 ## First increment
 
 Make one host run one smoke test through a native fixture before you add another host or a second design. Do not spawn a child agent to compare architectures.
@@ -24,6 +32,10 @@ Do not rewrite the framework to add folders. Move a module only after the test t
 
 A saved storage file is not a fresh login. An identifier from a protected endpoint is not an account binding. Prove a fresh login and bind the account to that identity before you trust cached state.
 
+Keep the sign-in principal, the application identity, the display name, and the contact email as separate fields. Assert that two of them are equal only after evidence for that provider shows the equality. A match on one provider does not establish the match on another.
+
+After two failed checks of the same premise, write that premise down. The next action is one observation that could show the premise is false. Do not log in again, and do not patch the assertion, until that observation is recorded.
+
 Keep a fresh-login smoke for each account provider and host. After that binding exists, qualify restored state for one provider and one host at a time. Close the original context. Open a new context with that state. Read the protected identity and the ready application surface without typing a password. Accept or reject that pair on its own.
 
 A miss or an expiry stays visible. Do not sign in again during an application test. Do not move restored state from one host to another. Keep the candidate in memory for the run.
@@ -33,6 +45,14 @@ Use only the accounts the operator approved for this target. Tests that share an
 Do not pass a password or token as a command argument. Do not write those values, cookie headers, or raw page snapshots into the reply or a log.
 
 After you choose a Playwright version, write that version into every brief you still follow.
+
+## Authoring loop
+
+Report authentication, identity, application checks, and cleanup as four separate outcomes. A passed hosting test does not pass a failed authoring check.
+
+A setting that exists only in an authoring adapter is not part of the framework. Put it in the native config before a component uses it.
+
+After you edit a class the held worker constructs, confirm the worker is running that edit. Restart the worker once when fixture setup must change. Do not discover the stale class through another business action. A selector failure is not a reason to start a new login.
 
 ## Layout
 
