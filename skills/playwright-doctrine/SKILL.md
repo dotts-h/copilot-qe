@@ -22,11 +22,15 @@ After a click, the next observation is the destination. A new route is a state o
 
 Make one host run one smoke test through a native fixture before you add another host or a second design. Do not spawn a child agent to compare architectures.
 
-After that smoke passes, add the other accepted hosts in the same process. An unqualified host stays blocked until that host passes fresh authentication, the expected identity, a ready application surface, the shared component contracts, a repeat run, and ownership-scoped teardown.
+The next unit is the hermetic failure tests for the rules that smoke uses. Then repeat that same host. Record both runs against the source fingerprint. Add the next browser host only after that record exists. Add one host at a time.
 
-The ordinary command runs the verified hosts. A separate command runs the full matrix. A blocked host stays a failure with its reason. Do not report it as a skip, a `test.fixme`, or a pass.
+A desktop host is its own pass. Map the windows that host opens before you submit credentials.
 
-Do not rewrite the framework to add folders. Move a module only after the test that protects that behavior exists.
+An unqualified host stays blocked until that host passes fresh authentication, the expected identity, a ready application surface, the shared component contracts, a repeat run, and ownership-scoped teardown.
+
+The ordinary command names one verified target. The full matrix is a separate command. A missing target must not launch every target. A blocked host stays a failure with its reason. Do not report it as a skip, a `test.fixme`, or a pass.
+
+Do not rewrite the framework to add folders. Move a module only after the test that protects that behavior exists. Keep an unexecuted experiment off the public fixture.
 
 ## Authentication state
 
@@ -52,7 +56,35 @@ Report authentication, identity, application checks, and cleanup as four separat
 
 A setting that exists only in an authoring adapter is not part of the framework. Put it in the native config before a component uses it.
 
-After you edit a class the held worker constructs, confirm the worker is running that edit. Restart the worker once when fixture setup must change. Do not discover the stale class through another business action. A selector failure is not a reason to start a new login.
+After you edit a class the held worker constructs, confirm the worker is running that edit. Restart the worker once when fixture setup must change. Do not discover the stale class through another business action.
+
+## Stay in the session
+
+Keep the owned context. Inspect and edit in that context.
+
+Start a new login for a fresh-login smoke, including its recorded repeat. A restored-state check opens a new context and does not type the password.
+
+Start another login only when the current context cannot answer the question. Write the reason in the run record before that login. A closed context, a crash, or the wrong account can be the reason.
+
+A selector miss is not a reason. A route change is not a reason. A failed assertion is not a reason. A stale worker is not a reason.
+
+## Run record
+
+Write one file under `runs/` after every unit. After a compaction, write the open record again before the next action. The chat summary is not this file.
+
+Name the source fingerprint, the target, the run kind, the runtime version, and the repeat index. Record authentication, identity, application checks, and cleanup as separate results. Name the exact failure. Name whether a new login happened and why. Name the owned windows that are still open, and name the next observation.
+
+Mark a finished experiment with its result before the next experiment starts. Mark an open experiment unresolved.
+
+A typecheck does not fill this file. A hosting-test pass does not fill it. A cleanup pass does not fill it.
+
+## Windows
+
+Name each window the product opens and the step that window owns. Follow the window for the current step.
+
+A login window that closes is a transition. The shell is the window that replaces it.
+
+Return one page from the fixture only when the product shows one page.
 
 ## Layout
 
@@ -61,6 +93,8 @@ One project in `playwright.config.ts` is one setup. Specs do not call `test.use`
 Specs import `test` and `expect` only from the project's test module. A spec calls a fixture flow and a business expect. A spec does not take `page`, `context`, or `browser`. A spec does not call `getBy`, click, or wait.
 
 Page objects live under `pages/`. A page imports only the directory one level under it, and files under `parts/`. Files under `parts/` import no page. A flow that uses two branches lives in a fixture.
+
+The file that owns a decision shows where the value comes from. Stop when a reader cannot see that source. Do not add a base page, a custom runner, or a service locator.
 
 Custom matchers are `expect.extend` in the project's expect module. Do not import `expect` from `@playwright/test` in any other file.
 
@@ -82,6 +116,8 @@ A closed shadow root, or a frame the browser will not expose, has no locator ins
 A page object is stateless. Assign locator fields in the constructor only.
 
 A method that acts ends in one awaited hard expect. A second legal outcome is a second method. Do not use `expect.soft` in a page.
+
+Assert the product fact you named. A count of matching text stays a count of text until you show that it is that fact.
 
 Locator order is `getByRole`, `getByText`, `getByLabel`, `getByPlaceholder`, `getByAltText`, `getByTitle`, then `getByTestId`. Do not use a CSS or XPath locator.
 
