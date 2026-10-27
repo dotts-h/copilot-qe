@@ -28,6 +28,8 @@ Before the click that can open a window, capture the popup. Do not act on the pa
 
 If the click navigates the same page, it is not a child window. Inspect that page. Do not wait for a popup the product does not open.
 
+After a click, inspect the destination before any parent predicate. A new route is a state of the current frame.
+
 ## Account challenge
 
 Read the displayed account identifier before you submit the password. Stop when it differs from the intended account, including by letter case.
